@@ -36,6 +36,33 @@ export const CONDITION_OPTIONS = [
   { value: "less", label: "Less than (<)" },
 ];
 
+// Shared symbol constants - single source of truth
+const FINANCIAL_SYMBOLS = [
+  { symbol: "NYSE:JPM", displayName: "JPMorgan Chase" },
+  { symbol: "NYSE:WFC", displayName: "Wells Fargo Co New" },
+  { symbol: "NYSE:BAC", displayName: "Bank Amer Corp" },
+  { symbol: "NYSE:HSBC", displayName: "Hsbc Hldgs Plc" },
+  { symbol: "NYSE:C", displayName: "Citigroup Inc" },
+  { symbol: "NYSE:MA", displayName: "Mastercard Incorporated" },
+];
+
+const TECHNOLOGY_SYMBOLS = [
+  { symbol: "NASDAQ:AAPL", displayName: "Apple" },
+  { symbol: "NASDAQ:GOOGL", displayName: "Alphabet" },
+  { symbol: "NASDAQ:MSFT", displayName: "Microsoft" },
+  { symbol: "NASDAQ:FB", displayName: "Meta Platforms" },
+  { symbol: "NYSE:ORCL", displayName: "Oracle Corp" },
+  { symbol: "NASDAQ:INTC", displayName: "Intel Corp" },
+];
+
+const SERVICES_SYMBOLS = [
+  { symbol: "NASDAQ:AMZN", displayName: "Amazon" },
+  { symbol: "NYSE:BABA", displayName: "Alibaba Group Hldg Ltd" },
+  { symbol: "NYSE:T", displayName: "At&t Inc" },
+  { symbol: "NYSE:WMT", displayName: "Walmart" },
+  { symbol: "NYSE:V", displayName: "Visa" },
+];
+
 // TradingView Charts
 export const MARKET_OVERVIEW_WIDGET_CONFIG = {
   colorTheme: "dark", // dark mode
@@ -56,35 +83,15 @@ export const MARKET_OVERVIEW_WIDGET_CONFIG = {
   tabs: [
     {
       title: "Financial",
-      symbols: [
-        { s: "NYSE:JPM", d: "JPMorgan Chase" },
-        { s: "NYSE:WFC", d: "Wells Fargo Co New" },
-        { s: "NYSE:BAC", d: "Bank Amer Corp" },
-        { s: "NYSE:HSBC", d: "Hsbc Hldgs Plc" },
-        { s: "NYSE:C", d: "Citigroup Inc" },
-        { s: "NYSE:MA", d: "Mastercard Incorporated" },
-      ],
+      symbols: FINANCIAL_SYMBOLS.map(({ symbol, displayName }) => ({ s: symbol, d: displayName })),
     },
     {
       title: "Technology",
-      symbols: [
-        { s: "NASDAQ:AAPL", d: "Apple" },
-        { s: "NASDAQ:GOOGL", d: "Alphabet" },
-        { s: "NASDAQ:MSFT", d: "Microsoft" },
-        { s: "NASDAQ:FB", d: "Meta Platforms" },
-        { s: "NYSE:ORCL", d: "Oracle Corp" },
-        { s: "NASDAQ:INTC", d: "Intel Corp" },
-      ],
+      symbols: TECHNOLOGY_SYMBOLS.map(({ symbol, displayName }) => ({ s: symbol, d: displayName })),
     },
     {
       title: "Services",
-      symbols: [
-        { s: "NASDAQ:AMZN", d: "Amazon" },
-        { s: "NYSE:BABA", d: "Alibaba Group Hldg Ltd" },
-        { s: "NYSE:T", d: "At&t Inc" },
-        { s: "NYSE:WMT", d: "Walmart" },
-        { s: "NYSE:V", d: "Visa" },
-      ],
+      symbols: SERVICES_SYMBOLS.map(({ symbol, displayName }) => ({ s: symbol, d: displayName })),
     },
   ],
   support_host: "https://www.tradingview.com", // TradingView host
@@ -137,35 +144,15 @@ export const MARKET_DATA_WIDGET_CONFIG = {
   symbolsGroups: [
     {
       name: "Financial",
-      symbols: [
-        { name: "NYSE:JPM", displayName: "JPMorgan Chase" },
-        { name: "NYSE:WFC", displayName: "Wells Fargo Co New" },
-        { name: "NYSE:BAC", displayName: "Bank Amer Corp" },
-        { name: "NYSE:HSBC", displayName: "Hsbc Hldgs Plc" },
-        { name: "NYSE:C", displayName: "Citigroup Inc" },
-        { name: "NYSE:MA", displayName: "Mastercard Incorporated" },
-      ],
+      symbols: FINANCIAL_SYMBOLS.map(({ symbol, displayName }) => ({ name: symbol, displayName })),
     },
     {
       name: "Technology",
-      symbols: [
-        { name: "NASDAQ:AAPL", displayName: "Apple" },
-        { name: "NASDAQ:GOOGL", displayName: "Alphabet" },
-        { name: "NASDAQ:MSFT", displayName: "Microsoft" },
-        { name: "NASDAQ:FB", displayName: "Meta Platforms" },
-        { name: "NYSE:ORCL", displayName: "Oracle Corp" },
-        { name: "NASDAQ:INTC", displayName: "Intel Corp" },
-      ],
+      symbols: TECHNOLOGY_SYMBOLS.map(({ symbol, displayName }) => ({ name: symbol, displayName })),
     },
     {
       name: "Services",
-      symbols: [
-        { name: "NASDAQ:AMZN", displayName: "Amazon" },
-        { name: "NYSE:BABA", displayName: "Alibaba Group Hldg Ltd" },
-        { name: "NYSE:T", displayName: "At&t Inc" },
-        { name: "NYSE:WMT", displayName: "Walmart" },
-        { name: "NYSE:V", displayName: "Visa" },
-      ],
+      symbols: SERVICES_SYMBOLS.map(({ symbol, displayName }) => ({ name: symbol, displayName })),
     },
   ],
 };
