@@ -83,15 +83,24 @@ export const MARKET_OVERVIEW_WIDGET_CONFIG = {
   tabs: [
     {
       title: "Financial",
-      symbols: FINANCIAL_SYMBOLS.map(({ symbol, displayName }) => ({ s: symbol, d: displayName })),
+      symbols: FINANCIAL_SYMBOLS.map(({ symbol, displayName }) => ({
+        s: symbol,
+        d: displayName,
+      })),
     },
     {
       title: "Technology",
-      symbols: TECHNOLOGY_SYMBOLS.map(({ symbol, displayName }) => ({ s: symbol, d: displayName })),
+      symbols: TECHNOLOGY_SYMBOLS.map(({ symbol, displayName }) => ({
+        s: symbol,
+        d: displayName,
+      })),
     },
     {
       title: "Services",
-      symbols: SERVICES_SYMBOLS.map(({ symbol, displayName }) => ({ s: symbol, d: displayName })),
+      symbols: SERVICES_SYMBOLS.map(({ symbol, displayName }) => ({
+        s: symbol,
+        d: displayName,
+      })),
     },
   ],
   support_host: "https://www.tradingview.com", // TradingView host
@@ -144,15 +153,24 @@ export const MARKET_DATA_WIDGET_CONFIG = {
   symbolsGroups: [
     {
       name: "Financial",
-      symbols: FINANCIAL_SYMBOLS.map(({ symbol, displayName }) => ({ name: symbol, displayName })),
+      symbols: FINANCIAL_SYMBOLS.map(({ symbol, displayName }) => ({
+        name: symbol,
+        displayName,
+      })),
     },
     {
       name: "Technology",
-      symbols: TECHNOLOGY_SYMBOLS.map(({ symbol, displayName }) => ({ name: symbol, displayName })),
+      symbols: TECHNOLOGY_SYMBOLS.map(({ symbol, displayName }) => ({
+        name: symbol,
+        displayName,
+      })),
     },
     {
       name: "Services",
-      symbols: SERVICES_SYMBOLS.map(({ symbol, displayName }) => ({ name: symbol, displayName })),
+      symbols: SERVICES_SYMBOLS.map(({ symbol, displayName }) => ({
+        name: symbol,
+        displayName,
+      })),
     },
   ],
 };
