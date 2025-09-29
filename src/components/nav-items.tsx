@@ -10,9 +10,10 @@ const NavItems = () => {
   const pathName = usePathname();
 
   const isActive = (path: string) => {
+    if (!pathName) return false;
     if (path === "/") return pathName === "/";
 
-    return pathName?.startsWith(path);
+    return pathName === path || pathName.startsWith(`${path}/`);
   };
 
   return (

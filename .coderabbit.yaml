@@ -72,46 +72,10 @@ reviews:
 
     - path: "**/*.ts"
       instructions:
-        "In Typescript files, continuation indent size needs to be 4 spaces.\n
-        Multiline array initializer expressions in Typescript must not be aligned.\n
-        Binary operations in Typescript across multiple lines should not be aligned.\n
-        Multiline chained methods in Typescript should not be aligned.\n
-        Extends lists in Typescript across multiple lines should not be aligned.\n
-        For loops in Typescript across multiple lines should be aligned.\n
-        Parameters in Typescript across multiple lines should be aligned.\n
-        Calls in Typescript across multiple lines should not be aligned.\n
-        Multiline ternary operations in Typescript should not be aligned.\n
-        Object properties and var statements in Typescript should not be aligned.\n
-        Binary operation signs in Typescript need to be placed on the next line.\n
-        Insert blank lines after imports and around classes, functions, and methods in Typescript.\n
-        For 'if' and 'for loops' in Typescript, always use braces.\n
-        Avoid placing 'catch' parentheses on a new line in Typescript.\n
-        In Typescript, place the chained call dot on a new line.\n
-        Remove trailing comma in Typescript.\n
-        Union types, binary operations, ternary operations, and var declarations in Typescript need to be
-        wrapped on every item.\n
-        Binary operations, call parameters, for statements, imports, method parameters, object literals,
-        object types, and union types need to be split into lines when wrapped in Typescript.\n
-        Spaces after colons, optional parameters, and generator mults are required in Typescript.\n
-        Spaces should not be utilized within parentheses but should be utilized within object literal braces in Typescript.\n
-        Spaces need to be utilized within array initializer brackets in Typescript.\n
-        Explicit types for vars fields, function returns, and function expression returns in TypeScript need to be set.\n
-        Space before async arrow left parentheses in TypeScript is required.\n
-        Space before function left parentheses and class left brace in Typescript is desirable.\n
-        Prefer 'AS' for type casting in TypeScript.\n
-        Space is required before method call parentheses in TypeScript.\n
-        Space before Method Left Brace needs to be utilized in Typescript.\n
-        Space before Switch Parentheses is necessary in Typescript.\n
-        Space before Catch Left Brace is required in Typescript.\n
-        Utilize space before Catch Parentheses in Typescript.\n
-        Space before Catch Keyword is necessary in Typescript.\n
-        Make sure to use space before ASync Arrow LeftParen in TypeScript.\n
-        Make sure to use space before Type Colon in TypeScript.\n
-        Avoid space before Property Colon in TypeScript.\n
-        Utilize the space before Colon in TypeScript.\n
-        Always prefer 'import type' over 'import' when importing in TypeScript.\n
-        Always use 'public' modifier in TypeScript.\n
-        Always use property prefix.\n
+        "Follow the existing Prettier and ESLint configuration defined in .prettierrc and eslint.config.mjs.\n
+        For 'if' and 'for loops' in TypeScript, always use braces for clarity and consistency.\n
+        Prefer 'as' for type casting in TypeScript rather than angle bracket syntax.\n
+        Use 'import type' for type-only imports when importing types that are only used as types.\n
         Adopt the camelCase convention for naming functions. Ensure the names are clear and descriptive of the
         function's purpose.\n
         Enforce Single Responsibility Principle for every function. Make sure each function performs one task only.\n
