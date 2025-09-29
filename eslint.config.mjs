@@ -25,7 +25,6 @@ const eslintConfig = [
       "prefer-template": ["error"],
       semi: ["error"],
       quotes: ["error", "double"],
-      "n/no-process-env": ["error"],
       "check-file/filename-naming-convention": [
         "error",
         {
